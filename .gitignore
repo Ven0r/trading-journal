@@ -89,4 +89,4 @@ typings/
 out/
 
 # Sqlite-db
-.db
+*.db

@@ -7,7 +7,7 @@ let db = new sqlite3.Database('./trading-journal-db.db', (err) => {
     if (err) {
       console.error(err.message);
     }
-    console.log('Connected to the chinook database.');
+    console.log('Connected to the trading-journal database.');
   });
 
 // DB Sqlite3 Connection
@@ -19,10 +19,23 @@ var knex = require('knex')({
   }
 });
 
-knex.schema.createTable('users', function (table) {
-  table.increments();
-  table.string('name');
-  table.timestamps();
+knex.schema.createTable('trades', (table) => {
+  table.increments('id').primary;
+  table.timestamps('created_at');
+  table.timestamps('closed_at');
+  table.string('asset');
+  table.boolean('long_short');
+  table.decimal('entry', 2, 2);
+  table.decimal('target', 2, 2);
+  table.decimal('stop_loss', 2, 2);
+  table.string('risk');
+  table.decimal('size', 2, 2);
+})
+
+knex.schema.createTable('account', function (table) {
+  table.increments('id').primary;
+  table.decimal('value', 2, 2);
+  table.timestamps('created_at');
 })
 
 console.log("hello");
