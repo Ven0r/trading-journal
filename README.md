@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://imgur.com/a/L9TKWhr" alt="TA"></a>
+ <img width=200px height=200px src="https://i.imgur.com/zKGPQeH.jpg" alt="TA"></a>
 </p>
 
 <h3 align="center">Traders Anonymous</h3>
