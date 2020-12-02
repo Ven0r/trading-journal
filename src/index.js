@@ -30,13 +30,21 @@ knex.schema.createTable('trades', (table) => {
   table.decimal('stop_loss', 2, 2);
   table.string('risk');
   table.decimal('size', 2, 2);
-})
+}).then(() => console.log("table trades was created"))
+.catch((err) => { console.log(err); throw err })
+.finally(() => {
+    knex.destroy();
+});
 
 knex.schema.createTable('account', function (table) {
   table.increments('id').primary;
   table.decimal('value', 2, 2);
   table.timestamps('created_at');
-})
+}).then(() => console.log("table account was created"))
+.catch((err) => { console.log(err); throw err })
+.finally(() => {
+    knex.destroy();
+});
 
 console.log("hello");
 
