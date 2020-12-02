@@ -32,9 +32,8 @@ Add notes about how to use the system.
 Add additional notes about how to deploy this on a live system.
 
 ## ⛏️ Built Using
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
+- [Sqlite3](https://sqlite.org/index.html) - Database
+- [Electron](https://www.electronjs.org/) - Platform
 - [NodeJs](https://nodejs.org/en/) - Server Environment
 
 ## ✍️ Authors
