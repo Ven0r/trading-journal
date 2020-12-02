@@ -33,7 +33,7 @@ Add additional notes about how to deploy this on a live system.
 
 ## ⛏️ Built Using
 - [Sqlite3](https://sqlite.org/index.html) - Database
-- [Electron](https://www.electronjs.org/) - Platform
+- [Electron](https://www.electronjs.org/) - Framework
 - [NodeJs](https://nodejs.org/en/) - Server Environment
 
 ## ✍️ Authors
