@@ -3,6 +3,7 @@ const path = require('path');
 
 const sqlite3 = require('sqlite3').verbose();
 
+// Create DB if first launch
 let db = new sqlite3.Database('./trading-journal-db.db', (err) => {
     if (err) {
       console.error(err.message);
@@ -21,8 +22,8 @@ var knex = require('knex')({
 
 knex.schema.createTable('trades', (table) => {
   table.increments('id').primary;
-  table.timestamps('created_at');
-  table.timestamps('closed_at');
+  table.timestamp('created_at');
+  table.timestamp('closed_at');
   table.string('asset');
   table.boolean('long_short');
   table.decimal('entry', 2, 2);
@@ -39,7 +40,7 @@ knex.schema.createTable('trades', (table) => {
 knex.schema.createTable('account', function (table) {
   table.increments('id').primary;
   table.decimal('value', 2, 2);
-  table.timestamps('created_at');
+  table.timestamp('created_at');
 }).then(() => console.log("table account was created"))
 .catch((err) => { console.log(err); throw err })
 .finally(() => {
