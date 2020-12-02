@@ -1,6 +1,15 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
+const sqlite3 = require('sqlite3').verbose();
+
+let db = new sqlite3.Database('./trading-journal-db.db', (err) => {
+    if (err) {
+      console.error(err.message);
+    }
+    console.log('Connected to the chinook database.');
+  });
+
 // DB Sqlite3 Connection
 var knex = require('knex')({
   client: 'sqlite3',
