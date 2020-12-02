@@ -12,7 +12,7 @@
 </p>
 
 ## 🧐 About 
-This is a simple trade journal to help manage your trades based on my personal criteria. Plans to be able to adjust criteria may be introduced in the future. I'm a trader that is looking for a specific tool to help with my trades. Since there is nothing like it out there I decided to make it myself. I wanted to keep track of trades and assit with managing my risk. The jist of the risk management is this. Base risk 2%. After 1 loss you now risk 1%. You will only get back to 2% risk if you have completed replacing the ammount lost from the first loss. The same will accure if you lose on the 1% trade. Your risk will then be place at .5%. Same requiremnt to get back to 1%. The lowest risk you will take on is .5%.
+This is a simple trade journal to help manage your trades based on my personal criteria. Plans to be able to adjust criteria may be introduced in the future. I'm a trader that is looking for a specific tool to help with my trades. Since there is nothing like it out there I decided to make it myself. I wanted to keep track of trades and assist with managing my risk. The base risk is  2%. After 1 loss you now risk 1%. You will only get back to 2% risk if you have completed replacing the amount lost from the first loss. The same will occur if you lose on the 1% trade. Your risk will then be placed at .5%. The same requirement to get back to 1%. The lowest risk you will take on is .5%.
 
 ## 🏁 Getting Started
 Installation intructions to come.
