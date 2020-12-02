@@ -40,4 +40,4 @@ Add additional notes about how to deploy this on a live system.
 - [@VenorR4W](https://github.com/VenorR4W) - Idea & Initial work
 
 ## 📝 License
-This project is licensed under the MIT License - see the LICENSE.md file for details
+This project is licensed under the GPL v.2 License - see the LICENSE.md file for details
