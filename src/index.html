@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="h-100">
   <head>
     <meta charset="UTF-8">
     <title>TA Journal</title>
@@ -7,18 +7,57 @@
   </head>
 
   <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="account-value col">
+          <h3 class="justify-content-left pt-3">Account Value</h3><p class="justify-content-left">$2000</p>
+        </div>
+        <div class="account-value col">
+          <p class="text-right pt-3">Weeks Profit/Loss</p>
+          <p class="text-right">$0</p>
+        </div>
+        <div class="account-value col">
+          <p class="text-right pt-3">Months Profit/Loss</p>
+          <p class="text-right">$0</p>
+        </div>
+      </div>
 
-    <div class="container">
-      <div class="account-value">account</div>
+      <div class="row">
+        <div class="input-area col-8">
+          <form class="form-group row" action="/action_page.php">
+            <div class="col-xs-2">
+              <input class="form-control" id="ex1" type="text" placeholder="Asset">
+            </div>
+            <div class="col-xs-2">
+              <label for="ex2">col-xs-3</label>
+              <input class="form-control" id="ex2" type="text">
+            </div>
+            <div class="col-xs-2">
+              <label for="ex3">col-xs-4</label>
+              <input class="form-control" id="ex3" type="text">
+            </div>
+          </form>
+        </div>
 
-      <div class="input-area">input</div>
+        <div class="output-area col">
+          <p>output</p>
+        </div>
+      </div>
 
-      <div class="output-area">output</div>
+      <div class="row">
+        <div class="open-positions col">
+          <p>open</p>
+        </div>
+      </div>
 
-      <div class="open-positions">open</div>
+      <div class="row">
+        <div class="trade-history col">
+          <p>trade history</p>
+        </div>
+      </div>
 
-      <div class="trade-history">history</div>
-    <div>
-
+    </div>
   </body>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <script scr="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </html>

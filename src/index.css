@@ -1,40 +1,38 @@
-body {
+html, body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  margin: auto;
-  max-width: 38rem;
-  padding: 2rem;
+  margin: 0;
 }
 
-.container{
-  display: grid;
-  grid-template-areas:
-    "account        account        account"  
-    "input          input          output"  
-    "open_trade     open_trade     open_trade"  
-    "history        history        history";  
+h1 {
+  margin: 0;
 }
 
 .account-value {
   grid-area: account;
-  background: blue;
+  background: rgb(104, 104, 184);
+  height: 15vh;
 }
 
 .input-area {
   grid-area: input;
-  background: green;
+  background: rgb(103, 160, 103);
+  height: 25vh;
 }
 
 .output-area {
   grid-area: output;
-  background: purple;
+  background: rgb(189, 108, 189);
+  height: 25vh;
 }
 
 .open-positions {
   grid-area: open_trade;
-  background: orange;
+  background: rgb(167, 144, 103);
+  height: 25vh;
 }
 
 .trade-history {
   grid-area: history;
-  background: red;
+  background: rgb(196, 98, 98);
+  height: 35vh;
 }
