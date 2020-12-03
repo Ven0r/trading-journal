@@ -1,4 +1,8 @@
 const { app, BrowserWindow } = require('electron');
+
+// Implement Hot Reload
+require('electron-reload')(__dirname);
+
 const path = require('path');
 
 const sqlite3 = require('sqlite3').verbose();
@@ -46,8 +50,6 @@ knex.schema.createTable('account', function (table) {
 .finally(() => {
     knex.destroy();
 });
-
-console.log("hello");
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require

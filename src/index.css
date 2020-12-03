@@ -4,3 +4,37 @@ body {
   max-width: 38rem;
   padding: 2rem;
 }
+
+.container{
+  display: grid;
+  grid-template-areas:
+    "account        account        account"  
+    "input          input          output"  
+    "open_trade     open_trade     open_trade"  
+    "history        history        history";  
+}
+
+.account-value {
+  grid-area: account;
+  background: blue;
+}
+
+.input-area {
+  grid-area: input;
+  background: green;
+}
+
+.output-area {
+  grid-area: output;
+  background: purple;
+}
+
+.open-positions {
+  grid-area: open_trade;
+  background: orange;
+}
+
+.trade-history {
+  grid-area: history;
+  background: red;
+}
