@@ -61,6 +61,7 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 900,
     height: 750,
+    icon: 'src/icons/profile.png'
   });
   
   //
