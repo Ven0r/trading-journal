@@ -23,45 +23,136 @@
       </div>
 
       <div class="row">
-        <div class="input-area col-8">
-          <form class="form-group row" action="/action_page.php">
+        <div class="input-area col">
+          <form class="form-group row mt-5 pt-5 ml-5" action="/action_page.php">
             <div class="col-xs-2">
               <input class="form-control" id="ex1" type="text" placeholder="Asset">
             </div>
-            <div class="col-xs-2">
-              <label for="ex2">col-xs-3</label>
+            <div class="col-xs-2 ml-1">
               <input class="form-control" id="ex2" type="text" placeholder="Long/Short">
             </div>
-            <div class="col-xs-2">
-              <label for="ex3">col-xs-4</label>
+            <div class="col-xs-2 ml-1">
               <input class="form-control" id="ex3" type="text" placeholder="Entry">
             </div>
-            <div class="col-xs-2">
-              <label for="ex3">col-xs-4</label>
+            <div class="col-xs-2 ml-1">
               <input class="form-control" id="ex3" type="text" placeholder="Target">
             </div>
-            <div class="col-xs-2">
-              <label for="ex3">col-xs-4</label>
+            <div class="col-xs-2 ml-1">
               <input class="form-control" id="ex3" type="text" placeholder="Stop">
             </div>
             <button type="submit" class="btn-sm btn-primary">Submit</button>
           </form>
-        </div>
-
-        <div class="output-area col">
-          <p>output</p>
+          <div class="output text-center">
+            <p>Risk %</p>
+            <p>Size Amount</p>
+          </div>
         </div>
       </div>
 
       <div class="row">
         <div class="open-positions col">
-          <p>open</p>
+          <p class="text-center justify-content-center">open</p>
         </div>
       </div>
 
       <div class="row">
-        <div class="trade-history col">
-          <p>trade history</p>
+        <div class="trade-history col m-1 rounded">
+          <table class="table table-hover mt-3">
+            <thead>
+              <tr>
+                <th>Asset</th>
+                <th>Long/Short</th>
+                <th>Entry</th>
+                <th>Target</th>
+                <th>Stop</th>
+                <th>Risk</th>
+                <th>Close</th>
+                <th>Win/Loss</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>BTC</td>
+                <td>Long</td>
+                <td>19900.00</td>
+                <td>20000</td>
+                <td>18900</td>
+                <td>.5%</td>
+                <td>19999.99</td>
+                <td>Win</td>
+              </tr>
+              <tr>
+                <td>LTC</td>
+                <td>Long</td>
+                <td>63.44</td>
+                <td>90.00</td>
+                <td>50.00</td>
+                <td>.5%</td>
+                <td>90.20</td>
+                <td>Win</td>
+              </tr>
+              <tr>
+                <td>EOS</td>
+                <td>Short</td>
+                <td>4.00</td>
+                <td>2.00</td>
+                <td>4.30</td>
+                <td>.5%</td>
+                <td>4.10</td>
+                <td>Loss</td>
+              </tr>
+              <tr>
+                <td>EOS</td>
+                <td>Short</td>
+                <td>4.00</td>
+                <td>2.00</td>
+                <td>4.30</td>
+                <td>.5%</td>
+                <td>4.10</td>
+                <td>Loss</td>
+              </tr>
+              <tr>
+                <td>EOS</td>
+                <td>Short</td>
+                <td>4.00</td>
+                <td>2.00</td>
+                <td>4.30</td>
+                <td>.5%</td>
+                <td>4.10</td>
+                <td>Loss</td>
+              </tr>
+              <tr>
+                <td>EOS</td>
+                <td>Short</td>
+                <td>4.00</td>
+                <td>2.00</td>
+                <td>4.30</td>
+                <td>.5%</td>
+                <td>4.10</td>
+                <td>Loss</td>
+              </tr>
+              <tr>
+                <td>EOS</td>
+                <td>Short</td>
+                <td>4.00</td>
+                <td>2.00</td>
+                <td>4.30</td>
+                <td>.5%</td>
+                <td>4.10</td>
+                <td>Loss</td>
+              </tr>
+              <tr>
+                <td>EOS</td>
+                <td>Short</td>
+                <td>4.00</td>
+                <td>2.00</td>
+                <td>4.30</td>
+                <td>.5%</td>
+                <td>4.10</td>
+                <td>Loss</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
 

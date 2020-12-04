@@ -19,12 +19,6 @@ h1 {
   height: 25vh;
 }
 
-.output-area {
-  grid-area: output;
-  background: rgb(189, 108, 189);
-  height: 25vh;
-}
-
 .open-positions {
   grid-area: open_trade;
   background: rgb(167, 144, 103);
@@ -33,6 +27,7 @@ h1 {
 
 .trade-history {
   grid-area: history;
-  background: rgb(196, 98, 98);
+  background: rgb(196, 189, 189);
   height: 35vh;
+  overflow-y: scroll;
 }
