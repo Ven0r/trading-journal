@@ -17,6 +17,9 @@ This is a simple trade journal to help manage your trades based on my personal c
 ## 🏁 Getting Started
 Installation intructions to come.
 
+### Example
+<img width=800px height=600px src="https://i.imgur.com/DIMJwdJ.jpg" alt="TA"></a>
+
 ### Prerequisites
 
 ### Installing
