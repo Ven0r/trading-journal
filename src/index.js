@@ -51,6 +51,15 @@ knex.schema.createTable('account', function (table) {
     knex.destroy();
 });
 
+knex.schema.createTable('assets', function (table) {
+  table.increments('id').primary;
+  table.string('asset');
+}).then(() => console.log("table account was created"))
+.catch((err) => { console.log(err); throw err })
+.finally(() => {
+    knex.destroy();
+});
+
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
   app.quit();
