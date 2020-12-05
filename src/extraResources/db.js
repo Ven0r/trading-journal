@@ -9,6 +9,8 @@ const createDB = () =>  {
       });
 }
 
+exports.createDB = createDB;
+
 const createTables = () => {
     knex.schema.createTable('trades', (table) => {
       table.increments('id').primary;
@@ -46,3 +48,5 @@ const createTables = () => {
         knex.destroy();
     });
 }
+
+exports.createTable = createTables;
