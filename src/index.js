@@ -1,19 +1,10 @@
 const { app, BrowserWindow } = require('electron');
+const path = require('path');
+const sqlite3 = require('sqlite3').verbose();
+const db = require('./extraResources/db')
 
 // Implement Hot Reload
 require('electron-reload')(__dirname);
-
-const path = require('path');
-
-const sqlite3 = require('sqlite3').verbose();
-
-// Create DB if first launch
-let db = new sqlite3.Database('./trading-journal-db.db', (err) => {
-    if (err) {
-      console.error(err.message);
-    }
-    console.log('Connected to the trading-journal database.');
-  });
 
 // DB Sqlite3 Connection
 var knex = require('knex')({
@@ -23,6 +14,8 @@ var knex = require('knex')({
     useNullAsDefault: true
   }
 });
+
+db.createDB();
 
 knex.schema.createTable('trades', (table) => {
   table.increments('id').primary;
