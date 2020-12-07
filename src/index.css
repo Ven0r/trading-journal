@@ -9,30 +9,27 @@ h1 {
 
 .account-value {
   grid-area: account;
-  background: rgb(104, 104, 184);
-  height: 15vh;
+  background: rgb(51, 66, 71);
+  color: rgb(227, 231, 231);
+  height: 100%;
 }
 
 .input-area {
   grid-area: input;
-  background: rgb(103, 160, 103);
-  height: 25vh;
-}
-
-.output-area {
-  grid-area: output;
-  background: rgb(189, 108, 189);
-  height: 25vh;
+  background: rgb(145, 168, 175);
+  height: 100%;
 }
 
 .open-positions {
   grid-area: open_trade;
-  background: rgb(167, 144, 103);
+  background: rgb(145, 168, 175);
   height: 25vh;
+  overflow-y: scroll;
 }
 
 .trade-history {
   grid-area: history;
-  background: rgb(196, 98, 98);
-  height: 35vh;
+  background: rgb(158, 155, 155);
+  height: 36vh;
+  overflow-y: scroll;
 }
