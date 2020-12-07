@@ -91,3 +91,4 @@ out/
 # Sqlite-db
 *.db
 *.sqlite
+trading-journal-db.db
