@@ -1,69 +1,27 @@
 const { app, BrowserWindow } = require('electron');
+const path = require('path');
+const sqlite3 = require('sqlite3').verbose();
+// DB requirements
+const db = require('./extraResources/database/db')
+const account_table = require('./extraResources/database/account_repo')
+const asset_repo = require('./extraResources/database/asset_repo')
+const trade_repo = require('./extraResources/database/trade_repo')
 
 // Implement Hot Reload
 require('electron-reload')(__dirname);
-
-const path = require('path');
-
-const sqlite3 = require('sqlite3').verbose();
-
-// Create DB if first launch
-let db = new sqlite3.Database('./trading-journal-db.db', (err) => {
-    if (err) {
-      console.error(err.message);
-    }
-    console.log('Connected to the trading-journal database.');
-  });
-
-// DB Sqlite3 Connection
-var knex = require('knex')({
-  client: 'sqlite3',
-  connection: {
-    filename: "./trading-journal-db.sqlite",
-    useNullAsDefault: true
-  }
-});
-
-knex.schema.createTable('trades', (table) => {
-  table.increments('id').primary;
-  table.timestamp('created_at');
-  table.timestamp('closed_at');
-  table.string('asset');
-  table.boolean('long_short');
-  table.decimal('entry', 2, 2);
-  table.decimal('target', 2, 2);
-  table.decimal('stop_loss', 2, 2);
-  table.string('risk');
-  table.decimal('size', 2, 2);
-}).then(() => console.log("table trades was created"))
-.catch((err) => { console.log(err); throw err })
-.finally(() => {
-    knex.destroy();
-});
-
-knex.schema.createTable('account', function (table) {
-  table.increments('id').primary;
-  table.decimal('value', 2, 2);
-  table.timestamp('created_at');
-}).then(() => console.log("table account was created"))
-.catch((err) => { console.log(err); throw err })
-.finally(() => {
-    knex.destroy();
-});
-
-knex.schema.createTable('assets', function (table) {
-  table.increments('id').primary;
-  table.string('asset');
-}).then(() => console.log("table account was created"))
-.catch((err) => { console.log(err); throw err })
-.finally(() => {
-    knex.destroy();
-});
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
   app.quit();
 }
+
+//Create DB and Tables
+const connection = new db('./trading-journal-db.sqlite')
+const account = new account_table(connection)
+const asset = new asset_repo(connection)
+const trade = new trade_repo(connection)
+
+account.createTable().then(()=> asset.createTable()).then(()=> trade.createTable());
 
 const createWindow = () => {
   // Create the browser window.
@@ -106,3 +64,12 @@ app.on('activate', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
+
+// DB Sqlite3 Connection
+var knex = require('knex')({
+  client: 'sqlite3',
+  connection: {
+    filename: "./trading-journal-db.sqlite",
+  },
+    useNullAsDefault: true
+})
