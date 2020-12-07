@@ -21,7 +21,11 @@ const account = new account_table(connection)
 const asset = new asset_repo(connection)
 const trade = new trade_repo(connection)
 
-account.createTable().then(()=> asset.createTable()).then(()=> trade.createTable());
+account.createTable().then(()=> asset.createTable()).then(()=> trade.createTable())
+.catch((err) => {
+  console.log('Error: ')
+  console.log(JSON.stringify(err))
+});
 
 const createWindow = () => {
   // Create the browser window.

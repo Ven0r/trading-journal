@@ -1,4 +1,5 @@
 const sqlite3 = require('sqlite3').verbose();
+const { resolve, reject } = require('bluebird');
 const Promise = require('bluebird');
 
 // DB Sqlite3 Connection
@@ -27,6 +28,15 @@ class AppDAO {
     })
   }
 
+  close() {
+    this.db.close((err) => {
+      if (err) {
+        return console.error(err.message);
+      } else {
+        console.log('Disconnected connection to database')
+      }
+    })
+  };
 }
 
 module.exports = AppDAO;

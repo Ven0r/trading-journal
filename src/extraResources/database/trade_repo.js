@@ -8,7 +8,7 @@ class TradeTable {
     CREATE TABLE IF NOT EXISTS trades (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-      closed_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+      closed_at DATETIME DEFAULT NULL,
       asset TEXT,
       long_short BOOLEAN,
       entry REAL,
@@ -16,7 +16,7 @@ class TradeTable {
       stop_loss REAL,
       risk REAL,
       size REAL)`
-    return this.dao.run(sql)
+    return this.dao.run(sql).then(()=>this.dao.close())
   }
 }
 
